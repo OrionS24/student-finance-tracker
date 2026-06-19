@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <div id="aria-announcer" class="sr-only" aria-live="polite"></div>
+
+    <a href="#dashboard" class="skip-link">Skip to Content</a>
+
+    <header>
+        <h1>Student Finance Tracker</h1>
+    </header>
+
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#transactions">Transactions</a>
+        <a href="#add-transaction">Add Transaction</a>
+        <a href="#settings">Settings</a>
+    </nav>
+
+    <main>
+
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <div class="dashboard-grid">
+                <div>
+                    <h3>Total Transactions</h3>
+                    <p id="total-card">0</p>
+                </div>
+                <div>
+                    <h3>Total Spent</h3>
+                    <p id="total-spent-card">$0.00</p>
+                </div>
+                <div>
+                    <h3>Top Category</h3>
+                    <p id="top-category-card">None</p>
+                </div>
+                <div>
+                    <h3>Remaining Budget</h3>
+                    <p id="remaining-budget-card">$0.00</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="transactions">
+            <h2>Transactions</h2>
+            
+            <div class="search-box">
+                <label for="search" class="sr-only">Search transactions</label>
+                <input type="text" id="search" placeholder="Search transactions...">
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="transaction-rows"></tbody>
+            </table>
+        </section>
+
+        <section id="add-transaction">
+            <h2>Add Transaction</h2>
+            <form>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" id="description" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" step="0.01" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category">
+                        <option value="Food">Food</option>
+                        <option value="Books">Books</option>
+                        <option value="Transport">Transport</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Education">Education</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <button type="submit">Add</button>
+            </form>
+        </section>
+
+        <section id="settings">
+            <h2>Settings</h2>
+            
+            <div class="setting-group">
+                <label for="currency-select">Currency</label>
+                <select id="currency-select">
+                    <option value="USD">USD ($)</option>
+                    <option value="EUR">EUR (€)</option>
+                    <option value="RWF">RWF (RWF)</option>
+                </select>
+            </div>
+
+            <div class="setting-group">
+                <label for="monthly-cap">Monthly Budget Cap</label>
+                <input type="number" id="monthly-cap" placeholder="e.g. 500">
+            </div>
+
+            <div class="setting-group data-actions">
+                <h3>Data Management</h3>
+                <label for="import-json-input" class="button-label">Import JSON</label>
+                <input type="file" id="import-json-input" accept=".json">
+                <button type="button" onclick="exportToJSONFile()">Export JSON</button>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
