@@ -1,0 +1,62 @@
+[
+  {
+    "description": "Lunch at cafeteria",
+    "amount": "12.50",
+    "category": "Food",
+    "date": "2025-01-01"
+  },
+  {
+    "description": "Chemistry textbooks",
+    "amount": "89.99",
+    "category": "Books",
+    "date": "2025-01-09"
+  },
+  {
+    "description": "Coffee @ campus-cafe",
+    "amount": "2.25",
+    "category": "Food",
+    "date": "2025-02-01"
+  },
+  {
+    "description": "Computer science textbook",
+    "amount": "45",
+    "category": "Food",
+    "date": "2025-03-08"
+  },
+  {
+    "description": "Buss pass",
+    "amount": "45",
+    "category": "Transport",
+    "date": "2025-05-24"
+  },
+  {
+    "description": "Movie night",
+    "amount": "15.75",
+    "category": "Entertainment",
+    "date": "2025-05-28"
+  },
+  {
+    "description": "Notebook",
+    "amount": "0.01",
+    "category": "Books",
+    "date": "2025-05-29"
+  },
+  {
+    "description": "Advanced Engineering Mathematics Textbook",
+    "amount": "250",
+    "category": "Books",
+    "date": "2025-06-11"
+  },
+  {
+    "description": "Final Semester Fees",
+    "amount": "5000",
+    "category": "Education",
+    "date": "2025-12-31"
+  },
+  {
+    "description": "Book book",
+    "amount": "10",
+    "category": "Books",
+    "date": "2025-08-11"
+  }
+]
